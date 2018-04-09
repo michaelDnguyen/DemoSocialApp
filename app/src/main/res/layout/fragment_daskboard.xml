@@ -8,37 +8,32 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnGoogle"
             android:layout_width="match_parent"
             android:layout_height="98dp"
-            android:text="Google"
             android:layout_weight="0.3"
             android:drawableStart="@drawable/ic_dashboard_black_24dp"
-            tools:layout_editor_absoluteX="134dp"
-            tools:layout_editor_absoluteY="44dp" />
+            android:text="Google" />
 
         <Button
             android:id="@+id/btnZalo"
             android:layout_width="match_parent"
             android:layout_height="98dp"
             android:layout_weight="0.3"
-            android:text="Zalo"
             android:drawableStart="@drawable/ic_dashboard_black_24dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="44dp" />
+            android:text="Zalo" />
 
         <Button
             android:id="@+id/btnFacebook"
             android:layout_width="match_parent"
             android:layout_height="98dp"
             android:layout_weight="0.3"
-            android:text="Facebook"
             android:drawableStart="@drawable/ic_dashboard_black_24dp"
-            tools:layout_editor_absoluteX="251dp"
-            tools:layout_editor_absoluteY="44dp" />
+            android:text="Facebook" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

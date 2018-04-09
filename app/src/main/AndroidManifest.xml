@@ -51,7 +51,10 @@
         </activity>
         <activity
             android:name=".FacebookActivity"
-            android:label="@string/title_activity_facebook"></activity>
+            android:label="@string/title_activity_facebook" />
+        <activity
+            android:name=".ZaloActivity"
+            android:label="@string/title_activity_zalo"></activity>
     </application>
 
 </manifest>
