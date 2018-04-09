@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MyCompanyApp</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Button text -->
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+    <string name="loading">Loading...</string>
+
+    <string name="btn_recaptcha">Verify</string>
+
+    <string name="api_sitekey_recaptcha">6LcAf1AUAAAAADUQAlyndZoRaZvoOpcJ-XuO_wJ7</string>
+    <string name="api_secrectkey_recaptcha">6LcAf1AUAAAAABcsTpece5KIBXUkSi7AqXumbkPj</string>
+
+    <string name="facebook_app_id">1707036309520478</string>
+    <string name="fb_login_protocol_scheme">fb1707036309520478</string>
+
+    <string name="title_activity_auth">AuthActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_facebook">FacebookActivity</string>
+
+</resources>

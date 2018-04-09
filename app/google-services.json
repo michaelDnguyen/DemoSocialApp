@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "178428082669",
+    "project_id": "excellent-tide-111108"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178428082669:android:c0af4a521679a472",
+        "android_client_info": {
+          "package_name": "com.example.nntai.mycompanyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178428082669-qk6g43li2h2fhgn3hc7hi3d7ed49kbki.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nntai.mycompanyapp",
+            "certificate_hash": "d7782e62feb2a61546d1eeac8583cc50eb924bfd"
+          }
+        },
+        {
+          "client_id": "178428082669-h9bck5jo1vjic9phtokm641ngs877rtl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6lJuv9NepmV459lbj39cubw0CMeJDKOc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
