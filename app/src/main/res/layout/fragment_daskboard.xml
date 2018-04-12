@@ -6,18 +6,20 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/llo01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <Button
             android:id="@+id/btnGoogle"
             android:layout_width="match_parent"
             android:layout_height="98dp"
             android:layout_weight="0.3"
-            android:drawableStart="@drawable/ic_dashboard_black_24dp"
+            android:drawableStart="@android:drawable/ic_dialog_info"
             android:text="Google" />
 
         <Button
@@ -25,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="98dp"
             android:layout_weight="0.3"
-            android:drawableStart="@drawable/ic_dashboard_black_24dp"
+            android:drawableStart="@android:drawable/ic_dialog_info"
             android:text="Zalo" />
 
         <Button
@@ -33,7 +35,44 @@
             android:layout_width="match_parent"
             android:layout_height="98dp"
             android:layout_weight="0.3"
-            android:drawableStart="@drawable/ic_dashboard_black_24dp"
+            android:drawableStart="@android:drawable/ic_dialog_info"
             android:text="Facebook" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llo01">
+
+        <Button
+            android:id="@+id/btnPattern"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_weight="0.3"
+            android:drawableStart="@android:drawable/ic_dialog_info"
+            android:text="Pattern" />
+
+        <Button
+            android:id="@+id/btnFinger"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_weight="0.3"
+            android:drawableStart="@android:drawable/ic_dialog_info"
+            android:text="Finger" />
+
+        <Button
+            android:id="@+id/btnPin"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_weight="0.3"
+            android:drawableStart="@android:drawable/ic_dialog_info"
+            android:text="Pin" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

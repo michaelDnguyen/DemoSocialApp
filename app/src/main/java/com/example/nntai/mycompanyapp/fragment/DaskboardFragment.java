@@ -11,8 +11,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.nntai.mycompanyapp.FacebookActivity;
+import com.example.nntai.mycompanyapp.FingerActivity;
+import com.example.nntai.mycompanyapp.FingerPrintActivity;
 import com.example.nntai.mycompanyapp.GoogleAuthActivity;
+import com.example.nntai.mycompanyapp.PatternActivity;
 import com.example.nntai.mycompanyapp.R;
+import com.example.nntai.mycompanyapp.ZaloActivity;
 
 /**
  * Created by Tai-Nguyen on 4/8/18.
@@ -21,6 +25,7 @@ import com.example.nntai.mycompanyapp.R;
 public class DaskboardFragment extends Fragment {
 
     Button btnGoogle, btnZalo, btnFacebook;
+    Button btnFinger, btnPattern, btnPin;
     View v;
 
     @Nullable
@@ -41,6 +46,9 @@ public class DaskboardFragment extends Fragment {
         btnFacebook = (Button) v.findViewById(R.id.btnFacebook);
         btnGoogle = (Button) v.findViewById(R.id.btnGoogle);
         btnZalo = (Button) v.findViewById(R.id.btnZalo);
+        btnFinger = (Button) v.findViewById(R.id.btnFinger);
+        btnPattern = (Button) v.findViewById(R.id.btnPattern);
+        btnPin = (Button) v.findViewById(R.id.btnPin);
     }
 
     private void setListener() {
@@ -61,7 +69,21 @@ public class DaskboardFragment extends Fragment {
         btnZalo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ZaloActivity.class));
+            }
+        });
 
+        btnFinger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), FingerPrintActivity.class));
+            }
+        });
+
+        btnPattern.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), PatternActivity.class));
             }
         });
     }

@@ -4,8 +4,13 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
+        android:name=".base.myApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -49,12 +54,45 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
+        <!-- Zalo meta data -->
+        <meta-data
+            android:name="appID"
+            android:value="@string/zalo_app_id" />
+        <!-- Zalo SDK required WebLoginActivity -->
+        <activity
+            android:name="com.zing.zalo.zalosdk.oauth.WebLoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauthcode"
+                    android:scheme="zalo-3553853747470848064" /> <!-- Thay 12345 bằng zalo app id -->
+            </intent-filter>
+        </activity>
         <activity
             android:name=".FacebookActivity"
             android:label="@string/title_activity_facebook" />
         <activity
             android:name=".ZaloActivity"
-            android:label="@string/title_activity_zalo"></activity>
+            android:label="@string/title_activity_zalo" />
+        <activity
+            android:name=".FingerActivity"
+            android:label="@string/title_activity_finger" />
+        <activity
+            android:name=".PatternActivity"
+            android:label="@string/title_activity_pattern"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FingerPrintActivity"
+            android:theme="@style/AppTheme"
+            android:label="@string/title_activity_finger_print"></activity>
     </application>
 
 </manifest>

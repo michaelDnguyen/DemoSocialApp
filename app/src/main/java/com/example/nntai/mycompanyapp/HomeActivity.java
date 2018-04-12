@@ -17,11 +17,13 @@ import com.example.nntai.mycompanyapp.constant.myLog;
 import com.example.nntai.mycompanyapp.fragment.DaskboardFragment;
 import com.example.nntai.mycompanyapp.fragment.HomeFragment;
 import com.example.nntai.mycompanyapp.fragment.NotificationFragment;
+import com.zing.zalo.zalosdk.oauth.ValidateOAuthCodeCallback;
+import com.zing.zalo.zalosdk.oauth.ZaloSDK;
 
 import java.util.HashMap;
 import java.util.Stack;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements ValidateOAuthCodeCallback {
 
     private TextView mTextMessage;
 
@@ -73,6 +75,11 @@ public class HomeActivity extends AppCompatActivity {
             myLog.e("App hashKey = " + Constant.getApplicationHashKey(HomeActivity.this));
         } catch (Exception e) {
             myLog.printTrace(e);
+        }
+
+        //Checking oauthCode Zalo every open App
+        if (ZaloSDK.Instance.isAuthenticate(this)) {
+            myLog.e("Check Zalo Authenticated Success");
         }
     }
 
@@ -143,5 +150,16 @@ public class HomeActivity extends AppCompatActivity {
 
     /* Goto previous fragment in navigation stack of this tab */
         popFragments();
+    }
+
+    @Override
+    public void onValidateComplete(boolean isValidated, int errorCode, long userId, String oauthCode) {
+        if (isValidated) {
+            //Authenticated
+            myLog.e("Zalo Authenticated");
+        } else {
+            //Not authenticated
+            myLog.e("Zalo NOT Authenticated");
+        }
     }
 }
